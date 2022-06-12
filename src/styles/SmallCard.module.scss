@@ -1,0 +1,35 @@
+@import '../styles/scss/main.scss';
+
+.small-card {
+    max-width: 5.2rem;
+    border-radius: $border-radius-xs;
+    border: solid $color-border;
+    max-height: 12rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__top {
+        display: flex;
+        height: 7.3rem;
+        flex-direction: column;
+        justify-self: start;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffffff;
+        margin-bottom: auto;
+        padding: 0.8rem 0 0.8rem 0;
+    }
+    &__down {
+        height: 4.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-secondary;
+        padding: 0.8rem 0 1rem 0;
+    }
+}

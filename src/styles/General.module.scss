@@ -1,0 +1,240 @@
+@import '../styles/scss/main.scss';
+
+// Font sizes
+.text-xs {
+    font-size: $font-xs;
+}
+
+.text-sm {
+    font-size: $font-sm;
+}
+
+.text-md {
+    font-size: $font-md;
+}
+
+.text-lg {
+    font-size: $font-lg;
+}
+
+.text-xl {
+    font-size: $font-xl;
+}
+
+.text-vl {
+    font-size: $font-vl;
+}
+
+// Color variations
+.color-primary {
+    color: $color-primary;
+}
+
+.color-secondary {
+    color: $color-secondary;
+}
+
+.color-tertiary {
+    color: $color-tertiary;
+}
+
+.color-border {
+    color: $color-border;
+}
+
+.color-default {
+    color: $color-default;
+}
+
+// Margins
+.margin {
+    &__left {
+        &--xs {
+            margin-left: $xs;
+        }
+        &--sm {
+            margin-left: $sm;
+        }
+        &--md {
+            margin-left: $md;
+        }
+        &--lg {
+            margin-left: $lg;
+        }
+        &--xl {
+            margin-left: $xl;
+        }
+        &--vl {
+            margin-left: $vl;
+        }
+    }
+    &__right {
+        &--xs {
+            margin-right: $xs;
+        }
+        &--sm {
+            margin-right: $sm;
+        }
+        &--md {
+            margin-right: $md;
+        }
+        &--lg {
+            margin-right: $lg;
+        }
+        &--xl {
+            margin-right: $xl;
+        }
+        &--vl {
+            margin-right: $vl;
+        }
+    }
+    &__top {
+        &--xs {
+            margin-top: $xs;
+        }
+        &--sm {
+            margin-top: $sm;
+        }
+        &--md {
+            margin-top: $md;
+        }
+        &--lg {
+            margin-top: $lg;
+        }
+        &--xl {
+            margin-top: $xl;
+        }
+        &--vl {
+            margin-top: $vl;
+        }
+    }
+    &__bottom {
+        &--xs {
+            margin-bottom: $xs;
+        }
+        &--sm {
+            margin-bottom: $sm;
+        }
+        &--md {
+            margin-bottom: $md;
+        }
+        &--lg {
+            margin-bottom: $lg;
+        }
+        &--xl {
+            margin-bottom: $xl;
+        }
+        &--vl {
+            margin-bottom: $vl;
+        }
+    }
+}
+
+// Paddings
+.padding {
+    &__left {
+        &--xs {
+            padding-left: $xs;
+        }
+        &--sm {
+            padding-left: $sm;
+        }
+        &--md {
+            padding-left: $md;
+        }
+        &--lg {
+            padding-left: $lg;
+        }
+        &--xl {
+            padding-left: $xl;
+        }
+        &--vl {
+            padding-left: $vl;
+        }
+    }
+    &__right {
+        &--xs {
+            padding-right: $xs;
+        }
+        &--sm {
+            padding-right: $sm;
+        }
+        &--md {
+            padding-right: $md;
+        }
+        &--lg {
+            padding-right: $lg;
+        }
+        &--xl {
+            padding-right: $xl;
+        }
+        &--vl {
+            padding-right: $vl;
+        }
+    }
+    &__top {
+        &--xs {
+            padding-top: $xs;
+        }
+        &--sm {
+            padding-top: $sm;
+        }
+        &--md {
+            padding-top: $md;
+        }
+        &--lg {
+            padding-top: $lg;
+        }
+        &--xl {
+            padding-top: $xl;
+        }
+        &--vl {
+            padding-top: $vl;
+        }
+    }
+    &__bottom {
+        &--xs {
+            padding-bottom: $xs;
+        }
+        &--sm {
+            padding-bottom: $sm;
+        }
+        &--md {
+            padding-bottom: $md;
+        }
+        &--lg {
+            padding-bottom: $lg;
+        }
+        &--xl {
+            padding-bottom: $xl;
+        }
+        &--vl {
+            padding-bottom: $vl;
+        }
+    }
+}
+
+// Borders
+.border {
+    border: 0.1rem solid $color-border;
+    &__radius {
+        &--xs {
+            border-radius: $xs;
+        }
+        &--sm {
+            border-radius: $sm;
+        }
+        &--md {
+            border-radius: $md;
+        }
+        &--lg {
+            border-radius: $lg;
+        }
+        &--xl {
+            border-radius: $xl;
+        }
+        &--vl {
+            border-radius: $vl;
+        }
+    }
+}

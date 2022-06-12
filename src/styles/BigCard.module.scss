@@ -1,0 +1,41 @@
+.big-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+    max-width: 30rem;
+    height: 15rem;
+}
+
+.wrapper {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: auto;
+        &--temperature {
+            display: flex;
+            div {
+                margin-right: 1rem;
+            }
+        }
+        &--city {
+            p {
+                margin-bottom: 0.2rem;
+            }
+        }
+    }
+    &__down {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--date {
+            display: flex;
+            align-self: flex-end;
+            flex-direction: column;
+            p {
+                margin-bottom: 0.4rem;
+            }
+        }
+    }
+}
+

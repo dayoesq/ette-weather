@@ -1,7 +1,10 @@
 // Colors
-$color-primary: #262626;
-$color-secondary: #70757a;
+$color-primary: #00a5e5;
+$color-secondary: #e5f6fd;
+$color-tertiary: #70757a;
 $color-default: #f8f9fa;
+$color-black: #262626;
+$color-border: #e6e6e6;
 
 // Fonts
 $font-xs: 1rem;
@@ -10,3 +13,19 @@ $font-md: 1.5rem;
 $font-lg: 1.9rem;
 $font-xl: 2.3rem;
 $font-vl: 2.6rem;
+
+// Margin and padding modifiers
+$xs: 0.4rem;
+$sm: 0.6rem;
+$md: 0.8rem;
+$lg: 1rem;
+$xl: 1.2rem;
+$vl: 1.4rem;
+
+// Borders
+$border-radius-xs: 0.2rem;
+$border-radius-sm: 0.4rem;
+$border-radius-md: 0.6rem;
+$border-radius-lg: 0.8rem;
+$border-radius-xl: 1rem;
+$border-radius-vl: 1.2rem;
