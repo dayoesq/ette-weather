@@ -1,8 +1,7 @@
 .small-card {
-    max-width: 5.2rem;
-    border-radius: var(--border-radius-xs);
-    border: solid var(--color-border);
+    width: 100%;
     max-height: 12rem;
+    overflow: hidden;
 }
 
 .wrapper {
