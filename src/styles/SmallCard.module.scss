@@ -1,9 +1,7 @@
-@import '../styles/scss/main.scss';
-
 .small-card {
     max-width: 5.2rem;
-    border-radius: $border-radius-xs;
-    border: solid $color-border;
+    border-radius: var(--border-radius-xs);
+    border: solid var(--color-border);
     max-height: 12rem;
 }
 
@@ -29,7 +27,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background-color: $color-secondary;
+        background-color: var(--color-secondary);
         padding: 0.8rem 0 1rem 0;
     }
 }

@@ -1,131 +1,131 @@
-@import '../styles/scss/main.scss';
+// @import '../styles/scss/main.scss';
 
 // Font sizes
 .text-xs {
-    font-size: $font-xs;
+    font-size: var(--font-xs);
 }
 
 .text-sm {
-    font-size: $font-sm;
+    font-size: var(--font-sm);
 }
 
 .text-md {
-    font-size: $font-md;
+    font-size: var(--font-md);
 }
 
 .text-lg {
-    font-size: $font-lg;
+    font-size: var(--font-lg);
 }
 
 .text-xl {
-    font-size: $font-xl;
+    font-size: var(--font-xl);
 }
 
 .text-vl {
-    font-size: $font-vl;
+    font-size: var(--font-vl);
 }
 
 // Color variations
 .color-primary {
-    color: $color-primary;
+    color: var(--color-primary);
 }
 
 .color-secondary {
-    color: $color-secondary;
+    color: var(--color-secondary);
 }
 
 .color-tertiary {
-    color: $color-tertiary;
+    color: var(--color-tertiary);
 }
 
 .color-border {
-    color: $color-border;
+    color: var(--color-border);
 }
 
 .color-default {
-    color: $color-default;
+    color: var(--color-default);
 }
 
 // Margins
 .margin {
     &__left {
         &--xs {
-            margin-left: $xs;
+            margin-left: var(--xs);
         }
         &--sm {
-            margin-left: $sm;
+            margin-left: var(--sm);
         }
         &--md {
-            margin-left: $md;
+            margin-left: var(--md);
         }
         &--lg {
-            margin-left: $lg;
+            margin-left: var(--lg);
         }
         &--xl {
-            margin-left: $xl;
+            margin-left: var(--xl);
         }
         &--vl {
-            margin-left: $vl;
+            margin-left: var(--vl);
         }
     }
     &__right {
         &--xs {
-            margin-right: $xs;
+            margin-right: var(--xs);
         }
         &--sm {
-            margin-right: $sm;
+            margin-right: var(--sm);
         }
         &--md {
-            margin-right: $md;
+            margin-right: var(--md);
         }
         &--lg {
-            margin-right: $lg;
+            margin-right: var(--lg);
         }
         &--xl {
-            margin-right: $xl;
+            margin-right: var(--xl);
         }
         &--vl {
-            margin-right: $vl;
+            margin-right: var(--vl);
         }
     }
     &__top {
         &--xs {
-            margin-top: $xs;
+            margin-top: var(--xs);
         }
         &--sm {
-            margin-top: $sm;
+            margin-top: var(--sm);
         }
         &--md {
-            margin-top: $md;
+            margin-top: var(--md);
         }
         &--lg {
-            margin-top: $lg;
+            margin-top: var(--lg);
         }
         &--xl {
-            margin-top: $xl;
+            margin-top: var(--xl);
         }
         &--vl {
-            margin-top: $vl;
+            margin-top: var(--vl);
         }
     }
     &__bottom {
         &--xs {
-            margin-bottom: $xs;
+            margin-bottom: var(--xs);
         }
         &--sm {
-            margin-bottom: $sm;
+            margin-bottom: var(--sm);
         }
         &--md {
-            margin-bottom: $md;
+            margin-bottom: var(--md);
         }
         &--lg {
-            margin-bottom: $lg;
+            margin-bottom: var(--lg);
         }
         &--xl {
-            margin-bottom: $xl;
+            margin-bottom: var(--xl);
         }
         &--vl {
-            margin-bottom: $vl;
+            margin-bottom: var(--vl);
         }
     }
 }
@@ -134,107 +134,107 @@
 .padding {
     &__left {
         &--xs {
-            padding-left: $xs;
+            padding-left: var(--xs);
         }
         &--sm {
-            padding-left: $sm;
+            padding-left: var(--sm);
         }
         &--md {
-            padding-left: $md;
+            padding-left: var(--md);
         }
         &--lg {
-            padding-left: $lg;
+            padding-left: var(--lg);
         }
         &--xl {
-            padding-left: $xl;
+            padding-left: var(--xl);
         }
         &--vl {
-            padding-left: $vl;
+            padding-left: var(--vl);
         }
     }
     &__right {
         &--xs {
-            padding-right: $xs;
+            padding-right: var(--xs);
         }
         &--sm {
-            padding-right: $sm;
+            padding-right: var(--sm);
         }
         &--md {
-            padding-right: $md;
+            padding-right: var(--md);
         }
         &--lg {
-            padding-right: $lg;
+            padding-right: var(--lg);
         }
         &--xl {
-            padding-right: $xl;
+            padding-right: var(--xl);
         }
         &--vl {
-            padding-right: $vl;
+            padding-right: var(--vl);
         }
     }
     &__top {
         &--xs {
-            padding-top: $xs;
+            padding-top: var(--xs);
         }
         &--sm {
-            padding-top: $sm;
+            padding-top: var(--sm);
         }
         &--md {
-            padding-top: $md;
+            padding-top: var(--md);
         }
         &--lg {
-            padding-top: $lg;
+            padding-top: var(--lg);
         }
         &--xl {
-            padding-top: $xl;
+            padding-top: var(--xl);
         }
         &--vl {
-            padding-top: $vl;
+            padding-top: var(--vl);
         }
     }
     &__bottom {
         &--xs {
-            padding-bottom: $xs;
+            padding-bottom: var(--xs);
         }
         &--sm {
-            padding-bottom: $sm;
+            padding-bottom: var(--sm);
         }
         &--md {
-            padding-bottom: $md;
+            padding-bottom: var(--md);
         }
         &--lg {
-            padding-bottom: $lg;
+            padding-bottom: var(--lg);
         }
         &--xl {
-            padding-bottom: $xl;
+            padding-bottom: var(--xl);
         }
         &--vl {
-            padding-bottom: $vl;
+            padding-bottom: var(--vl);
         }
     }
 }
 
 // Borders
 .border {
-    border: 0.1rem solid $color-border;
+    border: 0.1rem solid var(--color-border);
     &__radius {
         &--xs {
-            border-radius: $xs;
+            border-radius: var(--xs);
         }
         &--sm {
-            border-radius: $sm;
+            border-radius: var(--sm);
         }
         &--md {
-            border-radius: $md;
+            border-radius: var(--md);
         }
         &--lg {
-            border-radius: $lg;
+            border-radius: var(--lg);
         }
         &--xl {
-            border-radius: $xl;
+            border-radius: var(--xl);
         }
         &--vl {
-            border-radius: $vl;
+            border-radius: var(--vl);
         }
     }
 }
