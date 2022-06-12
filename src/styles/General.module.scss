@@ -1,0 +1,240 @@
+// @import '../styles/scss/main.scss';
+
+// Font sizes
+.text-xs {
+    font-size: var(--font-xs);
+}
+
+.text-sm {
+    font-size: var(--font-sm);
+}
+
+.text-md {
+    font-size: var(--font-md);
+}
+
+.text-lg {
+    font-size: var(--font-lg);
+}
+
+.text-xl {
+    font-size: var(--font-xl);
+}
+
+.text-vl {
+    font-size: var(--font-vl);
+}
+
+// Color variations
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-secondary {
+    color: var(--color-secondary);
+}
+
+.color-tertiary {
+    color: var(--color-tertiary);
+}
+
+.color-border {
+    color: var(--color-border);
+}
+
+.color-default {
+    color: var(--color-default);
+}
+
+// Margins
+.margin {
+    &__left {
+        &--xs {
+            margin-left: var(--xs);
+        }
+        &--sm {
+            margin-left: var(--sm);
+        }
+        &--md {
+            margin-left: var(--md);
+        }
+        &--lg {
+            margin-left: var(--lg);
+        }
+        &--xl {
+            margin-left: var(--xl);
+        }
+        &--vl {
+            margin-left: var(--vl);
+        }
+    }
+    &__right {
+        &--xs {
+            margin-right: var(--xs);
+        }
+        &--sm {
+            margin-right: var(--sm);
+        }
+        &--md {
+            margin-right: var(--md);
+        }
+        &--lg {
+            margin-right: var(--lg);
+        }
+        &--xl {
+            margin-right: var(--xl);
+        }
+        &--vl {
+            margin-right: var(--vl);
+        }
+    }
+    &__top {
+        &--xs {
+            margin-top: var(--xs);
+        }
+        &--sm {
+            margin-top: var(--sm);
+        }
+        &--md {
+            margin-top: var(--md);
+        }
+        &--lg {
+            margin-top: var(--lg);
+        }
+        &--xl {
+            margin-top: var(--xl);
+        }
+        &--vl {
+            margin-top: var(--vl);
+        }
+    }
+    &__bottom {
+        &--xs {
+            margin-bottom: var(--xs);
+        }
+        &--sm {
+            margin-bottom: var(--sm);
+        }
+        &--md {
+            margin-bottom: var(--md);
+        }
+        &--lg {
+            margin-bottom: var(--lg);
+        }
+        &--xl {
+            margin-bottom: var(--xl);
+        }
+        &--vl {
+            margin-bottom: var(--vl);
+        }
+    }
+}
+
+// Paddings
+.padding {
+    &__left {
+        &--xs {
+            padding-left: var(--xs);
+        }
+        &--sm {
+            padding-left: var(--sm);
+        }
+        &--md {
+            padding-left: var(--md);
+        }
+        &--lg {
+            padding-left: var(--lg);
+        }
+        &--xl {
+            padding-left: var(--xl);
+        }
+        &--vl {
+            padding-left: var(--vl);
+        }
+    }
+    &__right {
+        &--xs {
+            padding-right: var(--xs);
+        }
+        &--sm {
+            padding-right: var(--sm);
+        }
+        &--md {
+            padding-right: var(--md);
+        }
+        &--lg {
+            padding-right: var(--lg);
+        }
+        &--xl {
+            padding-right: var(--xl);
+        }
+        &--vl {
+            padding-right: var(--vl);
+        }
+    }
+    &__top {
+        &--xs {
+            padding-top: var(--xs);
+        }
+        &--sm {
+            padding-top: var(--sm);
+        }
+        &--md {
+            padding-top: var(--md);
+        }
+        &--lg {
+            padding-top: var(--lg);
+        }
+        &--xl {
+            padding-top: var(--xl);
+        }
+        &--vl {
+            padding-top: var(--vl);
+        }
+    }
+    &__bottom {
+        &--xs {
+            padding-bottom: var(--xs);
+        }
+        &--sm {
+            padding-bottom: var(--sm);
+        }
+        &--md {
+            padding-bottom: var(--md);
+        }
+        &--lg {
+            padding-bottom: var(--lg);
+        }
+        &--xl {
+            padding-bottom: var(--xl);
+        }
+        &--vl {
+            padding-bottom: var(--vl);
+        }
+    }
+}
+
+// Borders
+.border {
+    border: 0.1rem solid var(--color-border);
+    &__radius {
+        &--xs {
+            border-radius: var(--xs);
+        }
+        &--sm {
+            border-radius: var(--sm);
+        }
+        &--md {
+            border-radius: var(--md);
+        }
+        &--lg {
+            border-radius: var(--lg);
+        }
+        &--xl {
+            border-radius: var(--xl);
+        }
+        &--vl {
+            border-radius: var(--vl);
+        }
+    }
+}

@@ -3,24 +3,7 @@
 @import './base/typography';
 @import './abstracts/functions';
 @import './abstracts/mixins';
-@import './abstracts/variables';
+// @import './abstracts/variables';
 @import './components/header';
 @import './components/weather';
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: $color-default;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
