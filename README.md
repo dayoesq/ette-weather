@@ -10,7 +10,7 @@ This app loads data for the following cities dynamically from the open weather m
 - Kuopio
 - Espoo
 
-Replace the `.env.example` with your Open weather map API like so: `REACT_APP_API_KEY=YOUR OPEN WEATHER MAP API KEY`
+Replace the `.env.example` with your `OpenWeatherMap` API like so: `REACT_APP_API_KEY=YOUR OPEN WEATHER MAP API KEY`
 
 ### HOW TO USE APP
 
