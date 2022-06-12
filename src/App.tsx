@@ -1,11 +1,12 @@
 import { FC } from 'react';
+import CardsWrapper from './components/CardsWrapper';
 // import BigCard from './components/BigCard';
-import SmallCard from './components/SmallCard';
+// import SmallCard from './components/SmallCard';
 
 import styles from './styles/App.module.scss';
 
 const App: FC = () => {
-    return <main className={styles.app}><SmallCard /></main>;
+    return <main className={styles.app}><CardsWrapper /></main>;
     // return <main className={styles.app}><BigCard /></main>;
 };
 

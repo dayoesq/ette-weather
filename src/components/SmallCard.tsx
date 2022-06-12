@@ -5,7 +5,9 @@ import general from '../styles/General.module.scss';
 
 const SmallCard: FC = () => {
     return (
-        <div className={`${styles['small-card']} ${general['border']}`}>
+        <div
+            className={`${styles['small-card']} ${general['border__radius--xs']} ${general['border']}`}
+        >
             <div className={styles['wrapper']}>
                 <div className={styles['wrapper__top']}>
                     <p
