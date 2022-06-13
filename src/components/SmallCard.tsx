@@ -1,9 +1,11 @@
 import { FC } from 'react';
 
+import { getHourMinute, toCelcius } from '../utils/helpers';
+
 import styles from '../styles/SmallCard.module.scss';
 import general from '../styles/General.module.scss';
 
-const SmallCard: FC = () => {
+const SmallCard: FC<IWeatherProps> = (props) => {
     return (
         <div
             className={`${styles['small-card']} ${general['border__radius--xs']} ${general['border']}`}
@@ -13,30 +15,32 @@ const SmallCard: FC = () => {
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        13:00
+                        {getHourMinute(props.hourTime)}
                     </p>
-                    <div>Icon</div>
+                    <div>{props.description}</div>
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        12&deg;C
+                        {toCelcius(props.temp)}&deg;C
                     </p>
                 </div>
                 <div className={styles['wrapper__down']}>
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        1.3m/s
+                        {props.speed ? `${props.speed}m/s` : null}
                     </p>
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        4%
+                        {props.humidity ? `${props.humidity} %` : null}
                     </p>
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        12mm
+                        {props.precipitation
+                            ? `${props.precipitation} mm`
+                            : null}
                     </p>
                 </div>
             </div>

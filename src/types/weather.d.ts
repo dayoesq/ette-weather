@@ -1,7 +1,35 @@
 interface IWeather {
-    coord: {
-        lon: number;
-        lat: number;
+    cod?: string;
+    message?: number;
+    cnt?: number;
+    list: [...IWeatherList];
+    city: {
+        id: number;
+        name: string;
+        coord: {
+            lat: number;
+            lon: number;
+        };
+        country: 'FI';
+        population: number;
+        timezone: number;
+        sunrise: number;
+        sunset: number;
+    };
+}
+
+interface IWeatherList {
+    dt: number;
+    main: {
+        temp: number;
+        feels_like: number;
+        temp_min: number;
+        temp_max: number;
+        pressure: number;
+        sea_level: number;
+        grnd_level: number;
+        humidity: number;
+        temp_kf: number;
     };
     weather: [
         {
@@ -11,33 +39,33 @@ interface IWeather {
             icon: string;
         }
     ];
-    base: string;
-    main: {
-        temp: number;
-        feels_like: number;
-        temp_min: number;
-        temp_max: number;
-        pressure: number;
-        humidity: number;
+    clouds?: {
+        all: number;
     };
-    visibility: number;
     wind: {
         speed: number;
         deg: number;
+        gust: number;
     };
-    clouds: {
-        all: number;
+    visibility?: number;
+    pop?: number;
+    rain: {
+        '3h': number;
     };
-    dt: number;
-    sys: {
-        type: number;
-        id: number;
-        country: string;
-        sunrise: number;
-        sunset: number;
+    sys?: {
+        pod: string;
     };
-    timezone: number;
-    id: number;
-    name: string;
-    cod: number;
+    dt_txt?: Date | string;
+}
+
+interface IWeatherProps {
+    name?: string;
+    description?: string;
+    icon: string;
+    temp: number;
+    dateTime: number;
+    hourTime: number;
+    speed: number;
+    humidity: number;
+    precipitation?: number;
 }

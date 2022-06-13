@@ -2,8 +2,9 @@ import { FC } from 'react';
 
 import styles from '../styles/BigCard.module.scss';
 import general from '../styles/General.module.scss';
+import { getDateTime, getHourMinute, toCelcius } from '../utils/helpers';
 
-const BigCard: FC = (props) => {
+const BigCard: FC<IWeatherProps> = (props) => {
     return (
         <div
             className={`${styles['big-card']} ${general['border__radius--xs']} ${general['border']}`}
@@ -13,20 +14,20 @@ const BigCard: FC = (props) => {
                     <p
                         className={`${general['color-black']} ${general['text-lg']}`}
                     >
-                        Helsinki
+                        {props.name}
                     </p>
                     <span
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        Scattered clouds
+                        {props.description}
                     </span>
                 </div>
                 <div className={styles['wrapper__top--temperature']}>
-                    <div>Icon</div>
+                    <div>{`${props.icon}.png`}</div>
                     <span
                         className={`${general['color-black']} ${general['text-vl']}`}
                     >
-                        50&deg;C
+                        {toCelcius(props.temp)}&deg;C
                     </span>
                 </div>
             </div>
@@ -35,29 +36,31 @@ const BigCard: FC = (props) => {
                     <p
                         className={`${general['color-black']} ${general['text-md']}`}
                     >
-                        May 1st
+                        {getDateTime(props.dateTime)}
                     </p>
                     <span
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        11:45
+                        {getHourMinute(props.hourTime)}
                     </span>
                 </div>
                 <div className={styles['wrapper__down--details']}>
                     <p
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        5.1m/s
+                        {props.speed ? `Wind: ${props.speed}m/s` : null}
                     </p>
                     <p
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        Humidity: 81%
+                        {props.humidity ? `Humidity: ${props.humidity} %` : null}
                     </p>
                     <p
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        Precipitation: (3h) 5 mm
+                        {props.precipitation
+                            ? `Precipitation (3h): ${props.precipitation} mm`
+                            : null}
                     </p>
                 </div>
             </div>
