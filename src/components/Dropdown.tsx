@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { cityDetails } from '../utils/constants';
+import { CITY_DETAILS } from '../utils/constants';
 
 import styles from '../styles/Dropdown.module.scss';
 import general from '../styles/General.module.scss';
@@ -13,7 +13,7 @@ const Dropdown: FC = () => {
                 id='cities'
                 className={`${general['color-black']} ${general['text-sm']} ${general['border__radius--xs']} ${general['border']}`}
             >
-                {cityDetails.map((city) => (
+                {CITY_DETAILS.map(city => (
                     <option value={city.id} key={city.id}>
                         {city.name}
                     </option>

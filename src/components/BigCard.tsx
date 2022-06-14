@@ -2,9 +2,14 @@ import { FC } from 'react';
 
 import styles from '../styles/BigCard.module.scss';
 import general from '../styles/General.module.scss';
-import { getDateTime, getHourMinute, toCelcius } from '../utils/helpers';
+import { ICON_URL } from '../utils/constants';
+import {
+    capitalizeFirstLetter,
+    getDateTime,
+    getHourMinute
+} from '../utils/helpers';
 
-const BigCard: FC<IWeatherProps> = (props) => {
+const BigCard: FC<IWeatherProps> = props => {
     return (
         <div
             className={`${styles['big-card']} ${general['border__radius--xs']} ${general['border']}`}
@@ -19,15 +24,20 @@ const BigCard: FC<IWeatherProps> = (props) => {
                     <span
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        {props.description}
+                        {capitalizeFirstLetter(props.description)}
                     </span>
                 </div>
                 <div className={styles['wrapper__top--temperature']}>
-                    <div>{`${props.icon}.png`}</div>
+                    <div>
+                        <img
+                            src={`${ICON_URL}/${props.icon}.png`}
+                            alt='Weather icon'
+                        />
+                    </div>
                     <span
                         className={`${general['color-black']} ${general['text-vl']}`}
                     >
-                        {toCelcius(props.temp)}&deg;C
+                        {Math.floor(props.temp)}&deg;C
                     </span>
                 </div>
             </div>
@@ -53,7 +63,9 @@ const BigCard: FC<IWeatherProps> = (props) => {
                     <p
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
                     >
-                        {props.humidity ? `Humidity: ${props.humidity} %` : null}
+                        {props.humidity
+                            ? `Humidity: ${props.humidity} %`
+                            : null}
                     </p>
                     <p
                         className={`${general['color-tertiary']} ${general['text-sm']}`}
