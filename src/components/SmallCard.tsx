@@ -1,11 +1,12 @@
 import { FC } from 'react';
 
-import { getHourMinute, toCelcius } from '../utils/helpers';
+import { getHourMinute } from '../utils/helpers';
 
 import styles from '../styles/SmallCard.module.scss';
 import general from '../styles/General.module.scss';
+import { ICON_URL } from '../utils/constants';
 
-const SmallCard: FC<IWeatherProps> = (props) => {
+const SmallCard: FC<IWeatherProps> = props => {
     return (
         <div
             className={`${styles['small-card']} ${general['border__radius--xs']} ${general['border']}`}
@@ -17,11 +18,16 @@ const SmallCard: FC<IWeatherProps> = (props) => {
                     >
                         {getHourMinute(props.hourTime)}
                     </p>
-                    <div>{props.description}</div>
+                    <div>
+                        <img
+                            src={`${ICON_URL}/${props.icon}.png`}
+                            alt='Weather icon'
+                        />
+                    </div>
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        {toCelcius(props.temp)}&deg;C
+                        {Math.floor(props.temp)}&deg;C
                     </p>
                 </div>
                 <div className={styles['wrapper__down']}>

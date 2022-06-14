@@ -9,18 +9,18 @@ import { weather } from './assets/data/weather';
 import styles from './styles/App.module.scss';
 import BigCard from './components/BigCard';
 import SmallCard from './components/SmallCard';
-// import { cityDetails, WEATHER_URL } from './utils/constants';
+// import { CITY_DETAILS, WEATHER_URL } from './utils/constants';
 
 const App: FC = () => {
     // const [city, setCity] = useState<string | undefined>('');
-    // const [cities, setCities] = useState<any>([]);
+    // const [cities, setCities] = useState<IWeather[]>([]);
 
     // useEffect(() => {
     //     const getWeatherHandler = async () => {
     //         try {
     //             const allWeather: any = [];
     //             if (city === '' || city === undefined) {
-    //                 cityDetails.forEach(async (coord) => {
+    //                 CITY_DETAILS.forEach(async coord => {
     //                     // Skip this iteration.
     //                     if (coord.lat === 0 || coord.lon === 0) return;
     //                     const response = await fetch(
@@ -29,27 +29,28 @@ const App: FC = () => {
     //                     allWeather.push(response);
     //                 });
     //                 setCities(allWeather);
+    //                 console.log(cities);
     //             }
     //         } catch (err: any) {
     //             console.error(err.message);
     //         }
     //     };
     //     getWeatherHandler();
-    // }, [city]);
+    // }, [cities, city]);
 
     return (
-        <main>
+        <main className={styles.app}>
             {weather &&
                 weather.map(city => (
                     <div className={styles['cards-wrapper']} key={city.city.id}>
                         <BigCard
                             key={city.city.id}
-                            dateTime={city.list[0].dt}
+                            dateTime={city.list[0].dt_txt}
                             name={city.city.name}
                             description={city.list[0].weather[0].description}
                             icon={city.list[0].weather[0].icon}
                             temp={city.list[0].main.temp}
-                            hourTime={city.list[0].dt}
+                            hourTime={city.list[0].dt_txt}
                             speed={city.list[0].wind.speed}
                             humidity={city.list[0].main.humidity}
                             precipitation={city.list[0].rain?.['3h']}
@@ -61,7 +62,7 @@ const App: FC = () => {
                                     dateTime={el.dt}
                                     icon={el.weather[0].icon}
                                     temp={el.main.temp}
-                                    hourTime={el.dt}
+                                    hourTime={el.dt_txt}
                                     speed={el.wind.speed}
                                     humidity={el.main.humidity}
                                     precipitation={el.rain?.['3h']}
