@@ -1,10 +1,58 @@
-.app {
-    padding: 1rem;
+// .app {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     gap: 1rem;
+// }
+
+.header {
+    &__main {
+        margin-bottom: 5rem;
+        &--top {
+            height: 4rem;
+            background-color: var(--color-primary);
+        }
+        &--center {
+            position: relative;
+            height: 8rem;
+            border-right: 0.1rem solid var(--color-border);
+            border-left: 0.1rem solid var(--color-border);
+            border-bottom: 0.1rem solid var(--color-border);
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding: var(--md);
+}
+
+.degree {
+    position: absolute;
+    right: 1rem;
 }
 
 .cards-wrapper {
@@ -20,4 +68,12 @@
     align-items: center;
     gap: 0.8rem;
     margin-top: var(--sm);
+}
+
+.container {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
 }
