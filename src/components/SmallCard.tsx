@@ -14,18 +14,18 @@ const SmallCard: FC<IWeatherProps> = props => {
             <div className={styles['wrapper']}>
                 <div className={styles['wrapper__top']}>
                     <p
-                        className={`${general['text-xs']} ${general['color-tertiary']}`}
+                        className={`${general['text-sm']} ${general['color-tertiary']}`}
                     >
                         {getHourMinute(props.hourTime)}
                     </p>
-                    <div>
+                    <div className={styles.image}>
                         <img
                             src={`${ICON_URL}/${props.icon}.png`}
                             alt='Weather icon'
                         />
                     </div>
                     <p
-                        className={`${general['text-xs']} ${general['color-tertiary']}`}
+                        className={`${general['text-md']} ${general['color-tertiary']}`}
                     >
                         {Math.floor(props.temp)}&deg;C
                     </p>
@@ -34,7 +34,7 @@ const SmallCard: FC<IWeatherProps> = props => {
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}
                     >
-                        {props.speed ? `${props.speed}m/s` : null}
+                        {props.speed ? `${props.speed} m/s` : null}
                     </p>
                     <p
                         className={`${general['text-xs']} ${general['color-tertiary']}`}

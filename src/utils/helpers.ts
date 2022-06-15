@@ -40,6 +40,12 @@ export const getDateTime = (
     return splitDate.toString();
 };
 
+/**
+ * Double number format.
+ *
+ * @return string
+ * @params string | number
+ */
 const appendZero = (i: string | number) => {
     if (i < 10) {
         i = '0' + i;
@@ -62,7 +68,7 @@ export const getHourMinute = (date: Date | string | number): string => {
 };
 
 /**
- * Capitalize words.
+ * Capitalize first letter.
  *
  * @params string
  * @return string
@@ -73,4 +79,20 @@ export const capitalizeFirstLetter = (words?: string) => {
     } else {
         throw new Error('Invalid argument type!');
     }
+};
+
+/**
+ * Replace Jyvaskyla with Jyväskylä.
+ *
+ * @params string
+ * @return string
+ */
+export const normaliseJyvaskyla = (city: string) => {
+    if (typeof city === 'string') {
+        if (city.toLowerCase() === 'jyvaskyla')
+            return city.replace(/a/g, 'ä');
+    } else {
+        throw new Error('Invalid argument type!');
+    }
+    return city;
 };
