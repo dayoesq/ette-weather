@@ -96,7 +96,7 @@ export const capitalizeFirstLetter = (words?: string) => {
  */
 export const normaliseJyvaskyla = (city: string) => {
     if (typeof city === 'string') {
-        if (city.toLowerCase() === 'jyvaskyla') return city.replace(/a/g, 'ä');
+        if (city.toLowerCase() === 'jyvaskyla') return city.replace(city, 'Jyväskylä');
     } else {
         throw new Error('Invalid argument type!');
     }
