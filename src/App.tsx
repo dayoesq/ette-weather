@@ -59,6 +59,7 @@ const App: FC = () => {
                 }
             })();
         }
+        // Clean effect.
         return () => {
             isMounted = false;
         };
@@ -71,14 +72,14 @@ const App: FC = () => {
                 <div className={`${styles['header__main--top']}`}>&nbsp;</div>
                 <div className={`${styles['header__main--center']}`}>
                     <p
-                        className={`${general['color-black']} ${general['text-lg']}`}
+                        className={`${general['text__color--black']} ${general['text-lg']}`}
                     >
                         Säätutka
                     </p>
                 </div>
             </div>
             <div className={styles.container}>
-                <div className={styles.temporary}>
+                <div className={styles['main-wrapper']}>
                     <div
                         className={`${styles.dropdown} ${general['border__radius--xs']} ${general['border']}`}
                     >
@@ -88,7 +89,7 @@ const App: FC = () => {
                             id='city'
                             value={city}
                             onChange={onChange}
-                            className={`${general['color-black']} ${general['text-sm']} ${general['border__radius--xs']} ${general['border']}`}
+                            className={`${general['text__color--black']} ${general['text-sm']} ${general['border__radius--xs']} ${general['border']}`}
                         >
                             {CITY_DETAILS.map(city => (
                                 <option
@@ -144,4 +145,3 @@ const App: FC = () => {
 };
 
 export default App;
-

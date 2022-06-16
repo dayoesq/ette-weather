@@ -13,11 +13,17 @@ export const getDateTime = (
         day: '2-digit'
     });
 
-    const dayFormat: { [key: string]: string } = {
-        '0': 'th',
-        '1': 'st',
-        '2': 'nd',
-        '3': 'rd'
+    const dayFormat: { [key: number]: string } = {
+        0: 'th',
+        1: 'st',
+        2: 'nd',
+        3: 'rd',
+        4: 'th',
+        5: 'th',
+        6: 'th',
+        7: 'th',
+        8: 'th',
+        9: 'th'
     };
 
     let splitDate = formattedDate
@@ -30,10 +36,11 @@ export const getDateTime = (
     for (let key in dayFormat) {
         let [month, day] = splitDate;
         if (day.endsWith(key)) {
-            day += dayFormat[key];
-            return `${month} ${day}`;
-        } else {
-            day += dayFormat[key];
+            day = `${day}${dayFormat[key]}`;
+            if (day.includes('01st')) {
+                day = `${day.replace('0', '')}`;
+                return `${month} ${day}`;
+            }
             return `${month} ${day}`;
         }
     }
@@ -61,9 +68,9 @@ const appendZero = (i: string | number) => {
  */
 export const getHourMinute = (date: Date | string | number): string => {
     const d = new Date(date);
-    let h = appendZero(d.getHours());
-    let m = appendZero(d.getMinutes());
-    let time = h + ':' + m;
+    const h = appendZero(d.getHours());
+    const m = appendZero(d.getMinutes());
+    const time = `${h}:${m}`;
     return time;
 };
 
@@ -89,8 +96,7 @@ export const capitalizeFirstLetter = (words?: string) => {
  */
 export const normaliseJyvaskyla = (city: string) => {
     if (typeof city === 'string') {
-        if (city.toLowerCase() === 'jyvaskyla')
-            return city.replace(/a/g, 'ä');
+        if (city.toLowerCase() === 'jyvaskyla') return city.replace(/a/g, 'ä');
     } else {
         throw new Error('Invalid argument type!');
     }

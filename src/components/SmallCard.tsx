@@ -11,44 +11,40 @@ const SmallCard: FC<IWeatherProps> = props => {
         <div
             className={`${styles['small-card']} ${general['border__radius--xs']} ${general['border']}`}
         >
-            <div className={styles['wrapper']}>
-                <div className={styles['wrapper__top']}>
-                    <p
-                        className={`${general['text-sm']} ${general['color-tertiary']}`}
-                    >
-                        {getHourMinute(props.hourTime)}
-                    </p>
-                    <div className={styles.image}>
-                        <img
-                            src={`${ICON_URL}/${props.icon}.png`}
-                            alt='Weather icon'
-                        />
-                    </div>
-                    <p
-                        className={`${general['text-md']} ${general['color-tertiary']}`}
-                    >
-                        {Math.floor(props.temp)}&deg;C
-                    </p>
+            <div className={styles['top']}>
+                <p
+                    className={`${general['text-sm']} ${general['text__color--tertiary']}`}
+                >
+                    {getHourMinute(props.hourTime)}
+                </p>
+                <div className={styles.image}>
+                    <img
+                        src={`${ICON_URL}/${props.icon}.png`}
+                        alt='Weather icon'
+                    />
                 </div>
-                <div className={styles['wrapper__down']}>
-                    <p
-                        className={`${general['text-xs']} ${general['color-tertiary']}`}
-                    >
-                        {props.speed ? `${props.speed} m/s` : null}
-                    </p>
-                    <p
-                        className={`${general['text-xs']} ${general['color-tertiary']}`}
-                    >
-                        {props.humidity ? `${props.humidity} %` : null}
-                    </p>
-                    <p
-                        className={`${general['text-xs']} ${general['color-tertiary']}`}
-                    >
-                        {props.precipitation
-                            ? `${props.precipitation} mm`
-                            : null}
-                    </p>
-                </div>
+                <p
+                    className={`${general['text-md']} ${general['text__color--tertiary']}`}
+                >
+                    {Math.floor(props.temp)}&deg;C
+                </p>
+            </div>
+            <div className={styles['down']}>
+                <p
+                    className={`${general['text-xs']} ${general['text__color--tertiary']}`}
+                >
+                    {props.speed ? `${props.speed} m/s` : null}
+                </p>
+                <p
+                    className={`${general['text-xs']} ${general['text__color--tertiary']}`}
+                >
+                    {props.humidity ? `${props.humidity} %` : null}
+                </p>
+                <p
+                    className={`${general['text-xs']} ${general['text__color--tertiary']}`}
+                >
+                    {props.precipitation ? `${props.precipitation} mm` : null}
+                </p>
             </div>
         </div>
     );
