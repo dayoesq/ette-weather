@@ -1,7 +1,5 @@
 import { FC } from 'react';
 
-import styles from '../styles/BigCard.module.scss';
-import general from '../styles/General.module.scss';
 import { ICON_URL } from '../utils/constants';
 import {
     capitalizeFirstLetter,
@@ -9,11 +7,15 @@ import {
     getHourMinute
 } from '../utils/helpers';
 
+import styles from '../styles/BigCard.module.scss';
+import general from '../styles/General.module.scss';
+
 const BigCard: FC<IWeatherProps> = props => {
     return (
         <div
             className={`${styles['big-card']} ${general['border__radius--xs']} ${general['border']}`}
         >
+            {/* Card's top part */}
             <div className={styles['wrapper__top']}>
                 <div className={styles['wrapper__top--city']}>
                     <p
@@ -41,6 +43,7 @@ const BigCard: FC<IWeatherProps> = props => {
                     </span>
                 </div>
             </div>
+            {/* Card's lower part */}
             <div className={styles['wrapper__down']}>
                 <div className={styles['wrapper__down--date']}>
                     <p
