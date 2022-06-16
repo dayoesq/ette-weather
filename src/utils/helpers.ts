@@ -41,6 +41,10 @@ export const getDateTime = (
                 day = `${day.replace('0', '')}`;
                 return `${month} ${day}`;
             }
+            if (day.includes('11st')) {
+                day = `${day.replace('11st', '11th')}`;
+                return `${month} ${day}`;
+            }
             return `${month} ${day}`;
         }
     }
