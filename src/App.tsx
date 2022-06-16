@@ -107,7 +107,7 @@ const App: FC = () => {
                                 </option>
                             ))}
                         </select>
-                        <span className={styles.degree}>&#9660;</span>
+                        <span className={styles.caret}>&#9660;</span>
                     </div>
                     {cities &&
                         cities.map(city => (
