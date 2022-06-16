@@ -4,10 +4,10 @@ import BigCard from './components/BigCard';
 import SmallCard from './components/SmallCard';
 
 import { CITY_DETAILS, WEATHER_URL } from './utils/constants';
+import { normaliseJyvaskyla } from './utils/helpers';
 
 import styles from './styles/App.module.scss';
 import general from './styles/General.module.scss';
-import { normaliseJyvaskyla } from './utils/helpers';
 
 const App: FC = () => {
     const [city, setCity] = useState<string | number | undefined>('0');
@@ -78,6 +78,7 @@ const App: FC = () => {
                     </p>
                 </div>
             </div>
+            {/* Main container */}
             <div className={styles.container}>
                 <div className={styles['main-wrapper']}>
                     <div

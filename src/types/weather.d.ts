@@ -63,8 +63,8 @@ interface IWeatherProps {
     description?: string;
     icon: string;
     temp: number;
-    dateTime: number;
-    hourTime: number;
+    dateTime: Date;
+    hourTime: Date;
     speed: number;
     humidity: number;
     precipitation?: number;
