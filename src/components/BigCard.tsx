@@ -17,12 +17,12 @@ const BigCard: FC<IWeatherProps> = props => {
             <div className={styles['wrapper__top']}>
                 <div className={styles['wrapper__top--city']}>
                     <p
-                        className={`${general['color-black']} ${general['text-lg']}`}
+                        className={`${general['text__color--black']} ${general['text-lg']}`}
                     >
                         {props.name}
                     </p>
                     <span
-                        className={`${general['color-tertiary']} ${general['text-sm']}`}
+                        className={`${general['text__color--tertiary']} ${general['text-sm']}`}
                     >
                         {capitalizeFirstLetter(props.description)}
                     </span>
@@ -35,7 +35,7 @@ const BigCard: FC<IWeatherProps> = props => {
                         />
                     </div>
                     <span
-                        className={`${general['color-black']} ${general['text-vl']}`}
+                        className={`${general['text__color--black']} ${general['text-vl']}`}
                     >
                         {Math.floor(props.temp)}&deg;C
                     </span>
@@ -44,31 +44,31 @@ const BigCard: FC<IWeatherProps> = props => {
             <div className={styles['wrapper__down']}>
                 <div className={styles['wrapper__down--date']}>
                     <p
-                        className={`${general['color-black']} ${general['text-md']}`}
+                        className={`${general['text__color--black']} ${general['text-md']}`}
                     >
                         {getDateTime(props.dateTime)}
                     </p>
                     <span
-                        className={`${general['color-tertiary']} ${general['text-sm']}`}
+                        className={`${general['text__color--tertiary']} ${general['text-sm']}`}
                     >
                         {getHourMinute(props.hourTime)}
                     </span>
                 </div>
                 <div className={styles['wrapper__down--details']}>
                     <p
-                        className={`${general['color-tertiary']} ${general['text-sm']}`}
+                        className={`${general['text__color--tertiary']} ${general['text-sm']}`}
                     >
                         {props.speed ? `Wind: ${props.speed}m/s` : null}
                     </p>
                     <p
-                        className={`${general['color-tertiary']} ${general['text-sm']}`}
+                        className={`${general['text__color--tertiary']} ${general['text-sm']}`}
                     >
                         {props.humidity
                             ? `Humidity: ${props.humidity} %`
                             : null}
                     </p>
                     <p
-                        className={`${general['color-tertiary']} ${general['text-sm']}`}
+                        className={`${general['text__color--tertiary']} ${general['text-sm']}`}
                     >
                         {props.precipitation
                             ? `Precipitation (3h): ${props.precipitation} mm`

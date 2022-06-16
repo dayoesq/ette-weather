@@ -1,19 +1,14 @@
-// .app {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     gap: 1rem;
-// }
-
 .header {
+    width: 100%;
     &__main {
-        margin-bottom: 5rem;
+        width: 100%;
         &--top {
+            width: 100%;
             height: 4rem;
             background-color: var(--color-primary);
         }
         &--center {
+            width: 100%;
             position: relative;
             height: 8rem;
             border-right: 0.1rem solid var(--color-border);
@@ -34,20 +29,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-self: center;
     width: 100%;
-}
-
-select {
-    width: 100%;
-    display: block;
-    outline: none;
-    border: none;
     background-color: #ffffff;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-    padding: var(--md);
+    padding: none;
+    overflow: hidden;
+    select {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: #ffffff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: hidden;
+        padding: var(--md);
+        overflow: '';
+        background-color: #ffffff;
+    }
 }
 
 .degree {
@@ -56,8 +56,7 @@ select {
 }
 
 .cards-wrapper {
-    max-width: 28rem;
-    height: max-content;
+    width: 30rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -66,12 +65,19 @@ select {
 .cards {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.6rem;
     margin-top: var(--sm);
 }
 
 .container {
-    margin: 1rem auto;
+    width: 100%;
+    padding: 4rem 15rem 4rem 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    width: max-content;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
