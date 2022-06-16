@@ -38,6 +38,9 @@ const App: FC = () => {
                             const data = await response.json();
                             allWeather.push(data);
                             setCities([...allWeather]);
+                            if (!response.ok) {
+                                throw new Error(response.message);
+                            }
                         });
                     } catch (err: any) {
                         console.error(err.message);
@@ -53,6 +56,9 @@ const App: FC = () => {
                         const resData = await response.json();
                         weather.push(resData);
                         setCities([resData]);
+                        if (!response.ok) {
+                            throw new Error(response.message);
+                        }
                     } catch (err: any) {
                         console.error(err.message);
                     }
