@@ -15,7 +15,7 @@ const BigCard: FC<IWeatherProps> = props => {
         <div
             className={`${styles['big-card']} ${general['border__radius--xs']} ${general['border']}`}
         >
-            {/* Card's top part */}
+            {/* Card's upper part */}
             <div className={styles['wrapper__top']}>
                 <div className={styles['wrapper__top--city']}>
                     <p
