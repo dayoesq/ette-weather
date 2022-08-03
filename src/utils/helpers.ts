@@ -37,7 +37,7 @@ export const getDateTime = (
         let [month, day] = splitDate;
         if (day.endsWith(key)) {
             day = `${day}${dayFormat[key]}`;
-            if (day.includes('01st')) {
+            if (day.startsWith('0')) {
                 day = `${day.replace('0', '')}`;
                 return `${month} ${day}`;
             }
