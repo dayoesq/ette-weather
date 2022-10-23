@@ -75,7 +75,7 @@ export const getHourMinute = (date: Date | string | number): string => {
     const h = appendZero(d.getHours());
     const m = appendZero(d.getMinutes());
     const time = `${h}:${m}`;
-    return time;
+    return time.toString();
 };
 
 /**
@@ -100,7 +100,8 @@ export const capitalizeFirstLetter = (words?: string) => {
  */
 export const normaliseJyvaskyla = (city: string) => {
     if (typeof city === 'string') {
-        if (city.toLowerCase() === 'jyvaskyla') return city.replace(city, 'Jyväskylä');
+        if (city.toLowerCase() === 'jyvaskyla')
+            return city.replace(city, 'Jyväskylä');
     } else {
         throw new Error('Invalid argument type!');
     }
